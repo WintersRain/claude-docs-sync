@@ -51,6 +51,18 @@ claude -p "check if docs updated, pull down changes"
 
 This starts a headless Claude Code session that runs the check script and exits. On Windows it uses Task Scheduler; on macOS/Linux it uses cron.
 
+## Custom Docs
+
+The `custom-docs/` directory contains supplementary guides not in the official docs. These are copied to `~/.claude/docs/claude-code/` alongside the fetched pages.
+
+To install custom docs:
+```bash
+cp custom-docs/*.md ~/.claude/docs/claude-code/
+```
+
+Current custom docs:
+- `parallel-subagents-troubleshooting.md` — Troubleshooting guide for parallel subagent dispatch and agent teams
+
 ## Where docs are stored
 
 ```
@@ -64,6 +76,7 @@ This starts a headless Claude Code session that runs the check script and exits.
       skills.md
       sub-agents.md
       settings.md
+      parallel-subagents-troubleshooting.md  # Custom guide
       ...
 ```
 
